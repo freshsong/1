@@ -119,7 +119,9 @@ public class BoardController {
         if(pass==null || pass.isEmpty()){
             redirectAttributes.addFlashAttribute("error", "비밀번호를 입력하세요.");
             return "redirect:delete/" + id;
+            
         }
+        System.out.println(id);
         //2. id 와 pass 가 db 같은지 ?
         BoardDto boardDto = bService.findById(id);
         if(boardDto != null && boardDto.getPass().equals(pass)){

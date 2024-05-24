@@ -2,6 +2,8 @@ package net.musecom.boot_board.dto;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.domain.Page;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,4 +40,11 @@ public class BoardDto {
 
        return bDto;
     }
+    public BoardDto(Long id, String bwriter, int hits, String title, LocalDateTime bbsCreatedTime){
+        this.id = id;
+        this.bwriter = bwriter;
+        this.hits = hits;
+        this.title = title;
+        this.bbsCreatedTime = bbsCreatedTime;
+}
 }
